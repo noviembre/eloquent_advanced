@@ -1,0 +1,5 @@
+1. Install laravel collective on:
+    * laravel5.7 : there's some problems to install. but this is a solution:
+            a - changing composer.json to
+            b - "laravelcollective/html": "5.7.*",
+

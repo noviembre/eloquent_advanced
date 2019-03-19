@@ -15,7 +15,10 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        $item = new product();
+       return view('products.create', compact(
+           'item'
+       ));
     }
 
     /**
@@ -26,7 +29,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        #--- checking first if the new title exist in the db
+        $product = product::firstOrCreate(
+            [ 'title' => $request->title ],
+            [ 'description' => $request->description ]
+        );
     }
 
 
