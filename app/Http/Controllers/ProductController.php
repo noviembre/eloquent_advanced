@@ -29,8 +29,9 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        #--- checking first if the new title exist in the db
-        $product = product::firstOrCreate(
+        #--- this code will not save the data but it will
+        #--- return the article in the $product object
+        $product = product::firstOrNew(
             [ 'title' => $request->title ],
             [ 'description' => $request->description ]
         );
