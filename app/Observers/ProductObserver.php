@@ -15,6 +15,8 @@ class ProductObserver
      */
     public function creating(Product $product)
     {
+        #--- poner el nombre del producto en mayuscula
+        $product->title = strtoupper($product->title);
 
         if ($product->quantity < 10) {
             $product->price = 2 * 2;
