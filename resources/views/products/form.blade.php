@@ -22,6 +22,16 @@
         @endif
     </div>
 
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input type="number" class="form-control" id="price" name="price" placeholder="Enter Product Price">
+    </div>
+    <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="number" class="form-control" id="quantity" name="quantity"
+               placeholder="Enter Product Quantity">
+    </div>
+
     <div class="box-footer clearfix">
 
 

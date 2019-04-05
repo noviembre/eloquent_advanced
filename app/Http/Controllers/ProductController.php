@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\product;
+use App\Product;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $item = new product();
+        $item = new Product();
        return view('products.create', compact(
            'item'
        ));
@@ -29,12 +29,21 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        #--- this code will not save the data but it will
-        #--- return the article in the $product object
-        $product = product::firstOrNew(
-            [ 'title' => $request->title ],
-            [ 'description' => $request->description ]
-        );
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'quantity' => 'required|numeric'
+        ]);
+
+        $product = new Product();
+        $product->title = $request->title;
+        $product->description = $request->description;
+        $product->price = $request->price;
+        $product->quantity = $request->quantity;
+        $product->save();
+
+        return redirect()->back();
     }
 
 

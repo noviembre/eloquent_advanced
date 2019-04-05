@@ -150,6 +150,9 @@ return [
         /*
          * Package Service Providers...
          */
+        # Register the service provider by adding the following entry
+        # to the providers array in config/app.php file:
+        App\Providers\ProductModelServiceProvider::class,
 
         /*
          * Application Service Providers...
