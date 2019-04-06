@@ -26,4 +26,10 @@ class Product extends Model
     {
         return $this->quantity * $this->price;
     }
+
+    public function getReportingDateAttribute($value)
+    {
+        $createDate = new \DateTime($value); //2017-08-14 20:58:37
+        return $createDate->format('Y-m-d');
+    }
 }

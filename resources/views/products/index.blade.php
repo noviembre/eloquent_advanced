@@ -8,10 +8,12 @@
                     <thead>
                     <tr>
 
-                        <td width="120">Product Name</td>
-                        <td width="120">Description</td>
-                        <td width="200">Product + description</td>
-                        <td>price * quatity</td>
+                        <th width="120">Product Name</th>
+                        <th width="120">Description</th>
+                        <th width="200">Product + description</th>
+                        <th>price * quatity</th>
+                        <th>Date</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -22,6 +24,7 @@
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->full_name }}</td>
                             <td>{{ $product->total_cost }}</td>
+                            <td>{{ $product->reporting_date }}</td>
 
                         </tr>
 
