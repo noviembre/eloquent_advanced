@@ -32,4 +32,11 @@ class Product extends Model
         $createDate = new \DateTime($value); //2017-08-14 20:58:37
         return $createDate->format('Y-m-d');
     }
+
+    #----------------------- MUTATORS
+    # modified values before save it
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = ucfirst($value);
+    }
 }
