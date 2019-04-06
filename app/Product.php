@@ -21,4 +21,9 @@ class Product extends Model
     {
         return $this->title . ' ' . $this->description;
     }
+
+    public function getTotalCostAttribute()
+    {
+        return $this->quantity * $this->price;
+    }
 }

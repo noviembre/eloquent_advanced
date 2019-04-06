@@ -11,6 +11,7 @@
                         <td width="120">Product Name</td>
                         <td width="120">Description</td>
                         <td width="200">Product + description</td>
+                        <td>price * quatity</td>
                     </tr>
                     </thead>
                     <tbody>
@@ -20,6 +21,8 @@
                             <td>{{ $product->title }}</td>
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->full_name }}</td>
+                            <td>{{ $product->total_cost }}</td>
+
                         </tr>
 
                     @endforeach
