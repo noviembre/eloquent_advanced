@@ -14,4 +14,11 @@ class Product extends Model
         'amount',
 
     ];
+
+    # sintax
+    # get + field name + attribute
+    public function getFullNameAttribute()
+    {
+        return $this->title . ' ' . $this->description;
+    }
 }

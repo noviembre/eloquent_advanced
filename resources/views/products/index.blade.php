@@ -19,7 +19,7 @@
                         <tr>
                             <td>{{ $product->title }}</td>
                             <td>{{ $product->description }}</td>
-                            <td>juntando</td>
+                            <td>{{ $product->full_name }}</td>
                         </tr>
 
                     @endforeach
